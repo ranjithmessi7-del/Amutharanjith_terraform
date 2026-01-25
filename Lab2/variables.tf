@@ -1,9 +1,0 @@
-variable "rg_name" {
-  type    = string
-  default = "rgmyname"
-}
-
-variable "location" {  # Changed from duplicate rg_name
-  type    = string
-  default = "southeastasia"  # Azure region names don't have spaces
-}

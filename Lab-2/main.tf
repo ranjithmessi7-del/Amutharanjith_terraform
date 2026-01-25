@@ -15,8 +15,8 @@ provider "azurerm" {
 }
 
 resource "azurerm_resource_group" "example" {
-  name     = "Amuthranjith_RG"
-  location = "Central India"
+  name     = var.rg_name
+  location = var.location
 
   tags = {
     environment = "Production"
