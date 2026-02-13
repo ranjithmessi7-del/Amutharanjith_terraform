@@ -10,7 +10,7 @@ terraform {
 
 provider "azurerm" {
   # ▼ ADD THIS LINE ▼ Replace with your target subscription ID
-  subscription_id = "a071a23d-f935-4079-a467-daaf6d2b21e1"
+  subscription_id = "741a2986-1e85-4bdc-8495-09ddd6c44c09"
   features {}
 }
 

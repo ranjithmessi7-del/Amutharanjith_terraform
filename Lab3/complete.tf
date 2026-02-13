@@ -1,5 +1,3 @@
-# Create ONE complete main.tf file
-@'
 terraform {
   required_providers {
     azurerm = {
@@ -21,14 +19,9 @@ resource "azurerm_resource_group" "rgnew" {
 
 # Storage Account
 resource "azurerm_storage_account" "storage" {
-  name                     = "mystorageaccount001"
+  name                     = "mystorageaccount00789"
   resource_group_name      = azurerm_resource_group.rgnew.name
   location                 = azurerm_resource_group.rgnew.location
   account_tier             = "Standard"
   account_replication_type = "LRS"
 }
-'@ | Out-File -FilePath "main.tf" -Encoding UTF8
-
-# Delete other .tf files to avoid confusion
-Remove-Item complete.tf -Force -ErrorAction SilentlyContinue
-Remove-Item variables.tf -Force -ErrorAction SilentlyContinue
